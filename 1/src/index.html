@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Portland</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="header__upper">
+				<div class="header-block">
+					<img src="assets/images/Menu_Icon.png" alt="menu" class="menu_icon">
+					<img src="assets/images/Portland.png" alt="logo" class="header_logo">
+				</div>
+				<nav class="header-nav__main">
+					<ul>
+						<li class="text__default">Home</li>
+						<li class="text__default">Devices</li>
+						<li class="text__default">Delivery & Payment</li>
+						<li class="text__default">Guarantee</li>
+						<li class="text__default">About Us</li>
+					</ul>
+				</nav>
+				<div class="header-block cart-block">
+					<img src="assets/images/Shopping_Cart_Icon.png" alt="cart" class="header_cart">
+					<span class="header_cart__span subtitle__black">CART</span>
+					<span class="header_cart__items subtitle__black">0</span>
+					<input type="button" class="header_sign-in" value="SIGN IN">
+				</div>
+			</div>
+			<div class="header__lower">
+				<nav class="header-nav">
+					<ul>
+						<li class="subtitle__grey">TOP SALES</li>
+						<li class="subtitle__grey">BRAND FOCUS</li>
+						<li class="subtitle__grey">HI-TECH</li>
+						<li class="subtitle__grey">BEST SELLERS</li>
+						<li class="subtitle__grey">PROJECTS</li>
+					</ul>
+				</nav>
+				<div class="header-search">
+					<a href="#" class="header-search_support subtitle__grey">SUPPORT</a>
+					<img src="assets/images/Search_Icon.png" alt="search" class="header-search_img">
+					<input type="text" class="header-search_input" value="I'm looking for..." onfocus="if (this.value == 'I\'m looking for...') {this.value = '';}"  onblur="if (this.value == '') {this.value = 'I\'m looking for...';}">
+				</div>
+			</div>
+		</header>
+		<aside class="slider">
+			<div class="slider-block">
+				<h2 class="slider_title">iPhone 6 32Gb Black</h2>
+				<p class="slider_text">At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+				<input type="button" class="slider_button" value="BUY NOW">
+			</div>
+			<div class="slider-img">
+				<img src="assets/images/iphone_6.png" alt="iphone 6 32gb black">
+			</div>
+		</aside>
+		<main class="main">
+			<div class="sort">
+				<span class="sort_by subtitle__grey">SORT BY</span>
+				<nav class="sort_nav">
+					<ul>
+						<li class="subtitle__black">BEST MATCH</li>
+					</ul>
+				</nav>
+				<div class="sort_container">
+					<span class="sort_keywords subtitle__grey">KEYWORDS</span>
+					<input type="text" class="sort_input__tablet" value="Tablet" onfocus="if (this.value == 'Tablet') {this.value = '';}">
+					<span class="sort_price subtitle__grey">PRICE</span>
+					<input type="text" class="sort_input__price" value="10" onfocus="if (this.value == '10') {this.value = '';}"  onblur="if (this.value == '') {this.value = '10';}">
+					<span class="sort_r">-</span>
+					<input type="text" class="sort_input__price" value="1000" onfocus="if (this.value == '1000') {this.value = '';}"  onblur="if (this.value == '') {this.value = '1000';}">	
+					<input type="checkbox" class="sort_checkbox">
+					<span class="sort_free text__default">Free Shipping</span>		
+				</div>
+				<span class="sort_ship subtitle__grey">SHIP TO:</span>
+							<nav class="sort_ship__nav">
+								<ul>
+									<li class="subtitle__black">USA</li>
+								</ul>
+							</nav>					
+			</div>
+			<div class="main-container">
+			<div class="filter-block">
+				<div class="categories">
+					<nav class="categories_filter">
+						<ul>
+							<li class="categories_name text__default">Top Sales</li>
+							<li class="categories_name text__default">Brand Focus</li>
+							<li class="categories_name text__default">Hi-Tech</li>
+							<li class="categories_name text__default">Home</li>
+							<li class="categories_name text__default">Sale</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="available">
+					<h4 class="available_title subtitle__black">AVAILABLE</h4>
+					<hr class="hr">
+					<div class="available-container"><input type="radio" name="shop" class="available_storage" id="storage"> <label for="storage" class="text__default">In Storage</label><span class="amount">45</span></div>
+					<div class="available-container">
+						<input type="radio" name="shop" class="available_online" id="online"> <label for="online" class="text__default">In Online-Shop</label><span class="amount">12</span>
+					</div>
+				</div>
+				<hr class="hr available_hr">
+				<div class="brands">
+					<h4 class="brands_title subtitle__black">BRANDS</h4>
+					<span class="brands_all blue subtitle__black">ALL</span>
+					<hr class="hr brand_hr">
+					<div class="brands-container">
+						<div class="brands-item">
+							<input type="checkbox" class="brand_input" id="apple">
+							<label for="apple" class="brand_name text__default">Apple</label>
+							<span class="amount">32</span>
+						</div>
+						<div class="brands-item">
+							<input type="checkbox" class="brand_input" id="jbl">
+							<label for="jbl" class="brand_name text__default">JBL</label>
+							<span class="amount">20</span>
+						</div>
+						<div class="brands-item">
+							<input type="checkbox" class="brand_input" id="bose">
+							<label for="bose" class="brand_name text__default">Bose</label>
+							<span class="amount">20</span>
+						</div>
+						<div class="brands-item">
+							<input type="checkbox" class="brand_input" id="nest">
+							<label for="nest" class="brand_name text__default">Nest</label>
+							<span class="amount">20</span>
+						</div>
+					</div>
+				</div>
+				<div class="condition">
+					<div class="brands">
+						<h4 class="brands_title subtitle__black">CONDITION</h4>
+						<span class="brands_all blue subtitle__black">SEE ALL</span>
+						<hr class="hr brand_hr">
+						<div class="brands-container">
+							<div class="brands-item">
+								<input type="checkbox" class="brand_input" id="conditionNew">
+								<label for="conditionNew" class="brand_name text__default">New</label>
+							</div>
+							<div class="brands-item">
+								<input type="checkbox" class="brand_input" id="manufacturer">
+								<label for="manufacturer" class="brand_name text__default">Manufacturer Refurbished</label>
+							</div>
+							<div class="brands-item">
+								<input type="checkbox" class="brand_input" id="seller">
+								<label for="seller" class="brand_name text__default">Seller Refurbished</label>
+							</div>
+							<div class="brands-item">
+								<input type="checkbox" class="brand_input" id="used">
+								<label for="used" class="brand_name text__default">Used</label>
+							</div>
+							<div class="brands-item">
+								<input type="checkbox" class="brand_input" id="parts">
+								<label for="parts" class="brand_name text__default">For Parts or not Working</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="delivery">
+					<h4 class="delivery_title subtitle__black">DELIVERY OPTIONS</h4>
+					<hr class="delivery__hr">
+					<div class="delivery-block">
+						<div class="delivery-container">
+							<input type="radio" class="delivery_radio" name="delivery-price" id="freeDelivery">
+							<label for="freeDelivery" class="text__default">Free</label>
+						</div>
+						<div class="delivery-container">
+							<input type="radio" class="delivery_radio" name="delivery-price" id="notFreeDelivery">
+							<label for="NotFreeDelivery" class="text__default">$4.99</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="items-block">
+				<div class="item a">
+					<img src="assets/images/appletv.png" alt="Apple TV" class="item_img">
+					<span class="item_name">Apple TV 32GB</span>
+					<span class="item_color subtitle__grey">BLACK</span>
+					<span class="item_price">$49.99</span>
+				</div>
+				<div class="item b">
+					<img src="assets/images/pebble.png" alt="Pebble Time" class="item_img">
+					<span class="item_name">Pebble Time</span>
+					<span class="item_color subtitle__grey">RED</span>
+					<span class="item_price">$29.99</span>
+				</div>
+				<div class="item c">
+					<img src="assets/images/Zendure_4-Port_USB.png" alt="Zendure port" class="item_img">
+					<span class="item_name">Zendure 4-Port USB</span>
+					<span class="item_color subtitle__grey">WHITE</span>
+					<span class="item_price">$49.99</span>
+				</div>
+				<div class="item d">
+					<img src="assets/images/bodyanalyzer.png" alt="Withings Smart Body Analyzer ws-50" class="item_img">
+					<span class="item_name">Withings Smart Body Analyzer ws-50</span>
+					<span class="item_color subtitle__grey">BLACK</span>
+					<span class="item_price">$39.99</span>
+				</div>
+				<div class="item-big e">
+					<img src="assets/images/jbl.png" alt="JBL charge" class="img__big">
+					<div class="item-big_content">
+						<div class="big-container">
+							<span class="item_name">JBL Charge 2+</span>
+							<span class="subtitle__big subtitle__grey">BLACK</span>
+						</div>
+						<div class="big-container__buy">
+							<span class="char subtitle__black">16 GB</span><input type="button" class="buy_now subtitle__black" value="BUY NOW">
+						</div>
+					</div>
+				</div>
+				<div class="item f">
+					<img src="assets/images/ollo.png" alt="Ollo Clip New" class="item_img">
+					<span class="item_name">Ollo Clip New</span>
+					<span class="item_color subtitle__grey">SILVER</span>
+					<span class="item_price">$19.99</span>
+				</div>
+				<div class="item g">
+					<img src="assets/images/fitbit.png" alt="Fitbit Charge HR Heart Rate and Activity Tracker" class="item_img">
+					<span class="item_name">Fitbit Charge HR Heart Rate and Activity Tracker</span>
+					<span class="item_color subtitle__grey">BLACK</span>
+					<span class="item_price">$19.99</span>
+				</div>
+				<div class="item h">
+					<img src="assets/images/appletv.png" alt="Apple Watch Sport 38mm Silver Aluminum Case" class="item_img">
+					<span class="item_name">Apple Watch Sport 38mm Silver Aluminum Case</span>
+					<span class="item_color subtitle__grey">WHITE</span>
+					<span class="item_price">$49.99</span>
+				</div>
+				<div class="item i">
+					<img src="assets/images/bose.png" alt="Bose SoundLink On-Ear Headphones" class="item_img">
+					<span class="item_name">Bose SoundLink On-Ear Headphones</span>
+					<span class="item_color subtitle__grey">WHITE</span>
+					<span class="item_price">$119.99</span>
+				</div>
+				<div class="item j">
+					<img src="assets/images/sonos.png" alt="Sonos Play-1 Wireless HiFi System" class="item_img">
+					<span class="item_name">Sonos Play-1 Wireless HiFi System</span>
+					<span class="item_color subtitle__grey">BLACK</span>
+					<span class="item_price">$99.99</span>
+				</div>
+				<div class="item l">
+					<img src="assets/images/termostat.png" alt="Termostat" class="item_img">
+				</div>																		
+			</section>	
+		</div>
+		<div class="next">
+			<div class="container__left arrow-container">
+				<img src="assets/images/arrow_left.png" alt="arrow left" class="arrow__left">
+			</div>
+			<div class="container-slide">
+				<div>
+					<a href="#" class="text_default">1</a>
+					<a href="#" class="text_default">2</a>
+					<a href="#" class="text_default">3</a>
+					<a href="#" class="active text_default">4</a>
+					<a href="#" class="text_default">5</a>
+					<a href="#" class="text_default">6</a>
+					<a href="#" class="text_default">7</a>
+					<a href="#" class="text_default">8</a>
+				</div>
+			</div>
+			<div class="container__right arrow-container">
+				<img src="assets/images/arrow_right.png" alt="arrow right" class="arrow__right">
+			</div>		
+		</div>	
+		</main>
+		<aside class="sale">
+			<div class="sale-block">
+				<div class="sale-container__title">
+					<h4 class="sale_title subtitle__black">BEST SELLERS</h4>
+				</div>
+				<div class="sale-container">
+					<div class="sale-elem">
+					<img src="assets/images/beanie.png" alt="beanie" class="sale_img">
+					<h5 class="sale_name text_default">Beanie</h5>
+					<span class="sale-color subtitle__grey">GREEN</span>
+					<div class="sale-price"><span class="past_price">£39.99</span><span class="new_price">£29.99</span></div>
+				</div>
+				<div class="sale-elem">
+					<img src="assets/images/tshirt.png" alt="tshirt" class="sale_img">
+					<h5 class="sale_name text_default">T-Shirt With a Print</h5>
+					<span class="sale-color subtitle__grey">DARK BLUE</span>
+					<div class="sale-price"><span class="past_price">£29.99</span><span class="new_price">£19.99</span></div>
+				</div>
+				<div class="sale-elem">
+					<img src="assets/images/hoodie.png" alt="hoodie" class="sale_img">
+					<h5 class="sale_name text_default">Pile-Lined Hooded Jacket</h5>
+					<span class="sale-color subtitle__grey">DARK BLUE</span>
+					<div class="sale-price"><span class="past_price">£49.99</span><span class="new_price">£39.99</span></div>
+				</div>
+				<div class="sale-elem">
+					<img src="assets/images/trainers.png" alt="trainers" class="sale_img">
+					<h5 class="sale_name text_default">Trainers</h5>
+					<span class="sale-color subtitle__grey">SPACE GREY</span>
+					<div class="sale-price"><span class="past_price">£39.99</span><span class="new_price">£29.99</span></div>
+				</div>
+				</div>
+			</div>
+		</aside>
+		<aside class="comments">
+			<div class="comments-block__title">
+				<h3 class="comments_title">What Our Customers Have to Say</h3>
+				<span class="comments_subtitle">Couple of Words About This Stories Section</span>
+			</div>
+			<div class="comments-block__content">
+				<div class="content-block">
+					<div class="commentator-block">
+						<img class="content_img" src="assets/images/Photo.png"></img>
+						<div class="name-container">
+							<span class="content_name">Celia Feilds</span>
+							<span class="content_subname">UX Expert</span>
+						</div>
+					</div>
+					<div class="content-container">
+						<span class="content_text">This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning upon such abstruse matters.</span>
+					</div>
+				</div>
+				<div class="content-block">
+					<div class="commentator-block">
+						<img class="content_img" src="assets/images/Photo.png"></img>
+						<div class="name-container">
+							<span class="content_name">Celia Feilds</span>
+							<span class="content_subname">UX Expert</span>
+						</div>
+					</div>
+					<div class="content-container">
+						<span class="content_text">Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</span>
+					</div>
+				</div>
+				<div class="content-block">
+					<div class="commentator-block">
+						<img class="content_img" src="assets/images/Photo.png"></img>
+						<div class="name-container">
+							<span class="content_name">Celia Feilds</span>
+							<span class="content_subname">UX Expert</span>
+						</div>
+					</div>
+					<div class="content-container">
+						<span class="content_text">This sounded a very good reason, and Alice was quite pleased to know it. 'I never thought of that before!' she said.
+						</span>
+					</div>
+				</div>
+			</div>
+		</aside>
+		<footer class="footer">
+			<div class="footer-contacts">
+				<img src="assets/images/footer_logo.png" alt="Portland" class="footer_logo">
+				<nav class="footer_nav">
+					<ul>
+						<li class="footer__li">HOME</li>
+						<li class="footer__li">SHOP</li>
+						<li class="footer__li">TEAM</li>
+						<li class="footer__li">ABOUT US</li>
+						<li class="footer__li">CONTACTS</li>
+					</ul>
+				</nav>
+				<div class="footer_social">
+					<img src="assets/images/Twitter_Icon.png" alt="twitter" class="link_social">
+					<img src="assets/images/Facebook_Icon.png" alt="facebook" class="link_social">
+					<img src="assets/images/G+_Icon.png" alt="google" class="link_social">
+				</div>
+			</div>
+			<hr class="footer_hr">
+			<div class="footer-block">
+				<span class="footer_text">She gave my mother such a turn, that I have always been convinced I am indebted to Miss Betsey for having been born on a Friday.</span>
+				<div class="footer-cont">
+					<span class="footer_privacy footer__lower">PRIVACY POLICY</span><span class="footer_conditions footer__lower">TERMS AND CONDITIONS</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

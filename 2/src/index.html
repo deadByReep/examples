@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New York City Museums</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Actor|Source+Sans+Pro:400,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	 <script src="https://api-maps.yandex.ru/2.1/?apikey=efdb8e0e-48c3-4ee8-ac2e-47b6e36b7e89&lang=ru_RU" type="text/javascript">
+    </script>
+</head>
+<body>
+	<header class="header">
+		<div class="header_upper">
+			<div class="header-block">
+				<div class="hamburger-menu">
+				    <input id="menu__toggle" type="checkbox" />
+				    <label class="menu__btn" for="menu__toggle">
+				      <span></span>
+				    </label>
+				    <ul class="menu__box">
+				      	<li><a class="menu__item" href="#">TOURS</a></li>
+						<li><a class="menu__item" href="#">ATTRACTIONS</a></li>
+						<li><a class="menu__item" href="#">MUSEUMS</a></li>
+						<li><a class="menu__item" href="#">DISCOUNT</a></li>
+						<li><a class="menu__item" href="#">NEIGHBORHOODS</a></li>
+				    </ul>
+				</div>
+				<img src="assets/images/logo.svg" alt="Sity" class="header__logo">
+				<div class="header__search-block">
+					<img src="assets/images/search__logo.png" alt="search__logo" class="search__img">
+					<input type="text" class="search__input" placeholder="Search City">
+				</div>
+				<nav class="header__city-nav">
+					<ul>
+						<li class="header_white-text">New York</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="user-block">
+				<nav class="user-content">
+					<ul class="user-content_ul">
+						<img src="assets/images/question.png" alt="question" class="user__img">
+						<li class="user__text user_help header_white-text">Help</li>
+						<img src="assets/images/star.png" alt="star" class="user__img dn">
+						<li class="user__text user_favorites header_white-text">Favorites</li>
+						<img src="assets/images/cart.png" alt="cart" class="user__img dn">
+						<li class="user__text user_cart header_white-text">Cart</li>
+						<img src="assets/images/user.png" alt="user" class="user__img">
+						<li class="user__text user_register header_white-text">Log in | Register</li>
+					</ul>
+					<div class="mobile-block">
+						<img src="assets/images/question.png" alt="question" class="mobile_img">
+						<img src="assets/images/search.png" alt="search" class="mobile_img">
+						<img src="assets/images/user.png" alt="user" class="mobile_img">
+					</div>
+				</nav>
+			</div>
+			</div>
+			<div class="header_lower">
+				<nav class="content-nav">
+					<ul class="content-nav__ul">
+						<li class="content-nav__elem">TOURS</li>
+						<li class="content-nav__elem">ATTRACTIONS</li>
+						<li class="content-nav__elem">MUSEUMS</li>
+						<li class="content-nav__elem">DISCOUNT PASSES</li>
+						<li class="content-nav__elem">NEIGHBORHOODS</li>
+					</ul>
+				</nav>
+			</div>
+	</header>
+	<section class="section">
+		<div class="section-block">
+			<span class="section__category">Category</span>
+			<span class="section__array">›</span>
+			<span class="section__museums">Museums</span>
+			<h1 class="section__title">New York City Museums</h1>
+		</div>
+	</section>
+	<aside>
+		<div class="slider">
+		  	<div class="mySlides animation">
+		  		<img src="assets/images/Guggenheim.png" alt="" class="slider__img">
+		  	</div>
+		  	<div class="mySlides animation">
+		  		<img src="assets/images/shutterstock.jpg" alt="" class="slider__img">
+		  	</div>
+		  	<div class="mySlides animation">
+		  		<img src="assets/images/newyork.jpg" alt="" class="slider__img">
+		  	</div>		  			  	
+		    <a class="slider__control prev" onclick="plusSlides(-1)">&#10094</a>
+		    <a class="slider__control next" onclick="plusSlides(1)">&#10095</a>
+  		</div>
+	</aside>
+	<main class="main">
+		<div class="filter-block">
+			<h2 class="filter__title">Museums</h2>
+			<div class="select-container">
+				<select name="Subcategories" id="" class="filter__select select_first">
+				<option value="Subcategories" class="filter__option">Subcategories</option>
+				<option value="Subcategories" class="filter__option">Subcategories</option>
+				<option value="Subcategories" class="filter__option">Subcategories</option>
+				<option value="Subcategories" class="filter__option">Subcategories</option>
+				<option value="Subcategories" class="filter__option">Subcategories</option>
+			</select>
+			<select name="Neighborhoods" id="" class="filter__select select_style">
+				<option value="Neighborhoods" class="filter__option">Neighborhoods</option>
+				<option value="Neighborhoods" class="filter__option">Neighborhoods</option>
+				<option value="Neighborhoods" class="filter__option">Neighborhoods</option>
+				<option value="Neighborhoods" class="filter__option">Neighborhoods</option>
+				<option value="Neighborhoods" class="filter__option">Neighborhoods</option>
+			</select>
+			<select name="Duration" id="" class="filter__select">
+				<option value="Duration" class="filter__option">Duration</option>
+				<option value="Duration" class="filter__option">Duration</option>
+				<option value="Duration" class="filter__option">Duration</option>
+				<option value="Duration" class="filter__option">Duration</option>
+				<option value="Duration" class="filter__option">Duration</option>
+			</select>
+			</div>
+			<div class="filter__buttons-container">
+				<div class="filter_wrap">
+					<input type="button" value="Map" class="filter__button" id="mapButton" onclick="getMap(this)">
+					<input type="button" class="filter__button" value="Filter" id="filter">
+				</div>
+			</div>
+		</div>
+		<div class="main-block">
+			<div class="hero-block" id="hero">
+				<div class="hero-filter">
+					<div class="hero-filter__wrap">
+						<span class="hero__sort">Sort</span>
+						<img src="assets/images/down.png" alt="down" class="img_down">
+					</div>
+					<span class="hero__result">38 Results</span>
+				</div>
+				<div class="hero-wrap">
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+					<div class="main-elem">
+						<img src="assets/images/elem.png" alt="NYC Museum of Art" class="elem__img">
+						<span class="elem__text">NYC Museum of Art Tour with Skip-the-Line Access</span>
+						<span class="elem__price">from $26 per person</span>
+					</div>
+				</div>
+			</div>
+			<div class="map-block" id="mapBlock">
+				<div class="map" id="map"></div>
+			</div>
+		</div>
+	</main>
+	<div class="fade">
+		<div class="menu_mobile ">
+		  <button class="close-menu">Filter X</button>
+		  <div class="mobile-container">
+		  	<div class="mobile-sub">
+		  		<div class="title-block">
+		  			<h3 class="sub__title mobile__title">Subcategories</h3>
+		  			<span class="sub__hidden hidden" id="sub">-</span>
+		  		</div>
+		  		<div class="sub-content">
+		  			<div class="sub-content__block">
+		  				<input type="checkbox" class="sub__checkbox" id="Art">
+		  				<label for="Art" class="sub__label mobile__label">Art Museums</label>
+		  			</div>
+		  			<div class="sub-content__block">
+		  				<input type="checkbox" class="sub__checkbox" id="History">
+		  				<label for="History" class="sub__label mobile__label">History Museums</label>
+		  			</div>
+		  			<div class="sub-content__block">
+		  				<input type="checkbox" class="sub__checkbox" id="Outdoor">
+		  				<label for="Outdoor" class="sub__label mobile__label">Outdoor Museums</label>
+		  			</div>
+		  		</div>
+		  	</div>
+		  	<div class="mobile-nigh">
+		  		<div class="title-block">
+		  			<h3 class="nigh__title mobile__title">Neighborhoods</h3>
+		  			<span class="nigh__hidden hidden" id="nigh">-</span>
+		  		</div>
+		  		<div class="nigh-content">
+		  			<div class="nigh-content__block">
+		  				<input type="checkbox" class="nigh__checkbox" id="Flatiron">
+		  				<label for="Flatiron" class="nigh__label mobile__label">Flatiron</label>
+		  			</div>
+		  			<div class="nigh-content__block">
+		  				<input type="checkbox" class="nigh__checkbox" id="Chelsea">
+		  				<label for="Chelsea" class="nigh__label mobile__label">Chelsea</label>
+		  			</div>
+		  			<div class="nigh-content__block">
+		  				<input type="checkbox" class="nigh__checkbox" id="Financial">
+		  				<label for="Financial" class="nigh__label mobile__label">Financial District</label>
+		  			</div>
+		  			<div class="nigh-content__block">
+		  				<input type="checkbox" class="nigh__checkbox" id="East">
+		  				<label for="East" class="nigh__label mobile__label">Upper East Side</label>
+		  			</div>
+		  			<div class="nigh-content__block">
+		  				<input type="checkbox" class="nigh__checkbox" id="West">
+		  				<label for="West" class="nigh__label mobile__label">Upper West Side</label>
+		  			</div>	
+		  		</div>
+		  	</div>
+		  	<div class="mobile-duration">
+		  		<div class="title-block">
+		  			<h3 class="duration__title mobile__title">Duration</h3>
+		  			<span class="duration__hidden hidden" id="duration">-</span>
+		  		</div>
+		  		<div class="duration-content">
+		  			<div class="duration-content__block">
+		  				<input type="checkbox" class="duration__checkbox" id="Hour">
+		  				<label for="Hour" class="duration__label mobile__label">Up to 1 Hour</label>
+		  			</div>
+		  			<div class="duration-content__block">
+		  				<input type="checkbox" class="duration__checkbox" id="1-6">
+		  				<label for="1-6" class="duration__label mobile__label">1-6 Hours</label>
+		  			</div>
+		  			<div class="duration-content__block">
+		  				<input type="checkbox" class="duration__checkbox" id="4">
+		  				<label for="4" class="duration__label mobile__label">4 Hours to 1 Day</label>
+		  			</div>
+		  			<div class="duration-content__block">
+		  				<input type="checkbox" class="duration__checkbox" id="More">
+		  				<label for="More" class="duration__label mobile__label">More Than 1 Day</label>
+		  			</div>	  			
+		  		</div>
+		  	</div>
+		  	<div class="mobile-buttons">
+		  		<button class="reset">Reset</button>
+		  		<button class="go">Go</button>
+		  	</div>
+		  </div>
+		</div>
+	</div>
+	<script>
+		ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64],
+            zoom: 7
+        });
+    }
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
